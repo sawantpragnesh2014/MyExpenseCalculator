@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddExpenseActivity">
+
+    <EditText
+        android:id="@+id/edt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/colorD2582F"
+        android:hint="What was this spent for?"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/colorD2582F"
+        android:hint="Amount"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/edt_name"
+        app:layout_constraintStart_toStartOf="@+id/edt_name"
+        app:layout_constraintTop_toBottomOf="@+id/edt_name" />
+
+    <TextView
+        android:id="@+id/txt_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:drawableEnd="@drawable/ic_add_ocean_blue_24dp"
+        android:drawablePadding="10dp"
+        android:text="11 Mar 2020"
+        android:textColor="@color/color3D3D3D"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_amount" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorD2582F"
+        android:text="SAVE"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_amount" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Select Category :"
+        android:textColor="@color/color3D3D3D"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/txt_date"
+        app:layout_constraintTop_toBottomOf="@+id/txt_date" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorD2582F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_date" />
+
+    <ImageButton
+        android:id="@+id/img_food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/ic_food"
+        app:layout_constraintEnd_toStartOf="@+id/img_entertainment"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        />
+
+    <TextView
+        android:id="@+id/txt_food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Food"
+        android:textColor="@color/color3D3D3D"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/img_food"
+        app:layout_constraintStart_toStartOf="@+id/img_food"
+        app:layout_constraintTop_toBottomOf="@+id/img_food" />
+
+    <ImageButton
+        android:id="@+id/img_travel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img_entertainment"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/ic_food" />
+
+    <TextView
+        android:id="@+id/txt_entertainment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entertainment"
+        android:textColor="@color/color3D3D3D"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/img_entertainment"
+        app:layout_constraintStart_toStartOf="@+id/img_entertainment"
+        app:layout_constraintTop_toTopOf="@+id/txt_food" />
+
+    <TextView
+        android:id="@+id/txt_travel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Travel"
+        android:textColor="@color/color3D3D3D"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/img_travel"
+        app:layout_constraintStart_toStartOf="@+id/img_travel"
+        app:layout_constraintTop_toTopOf="@+id/txt_entertainment" />
+
+    <ImageButton
+        android:id="@+id/img_entertainment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        app:layout_constraintEnd_toStartOf="@+id/img_travel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img_food"
+        app:layout_constraintTop_toTopOf="@+id/img_food"
+        app:srcCompat="@drawable/ic_entertainment" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
